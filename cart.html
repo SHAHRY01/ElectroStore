@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroStore - Cart</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/rsz_1rsz_electroshop-high-resolution-logo_1.png" alt="Tech Store Logo">
+            </a>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a id="close" href="#"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>#cart</h2>
+        <p>Add your coupon code & SAVE up to 70%!</p>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="cuopon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" name="" id="coupon-code" placeholder="Enter Your Coupon">
+                <button class="normal" id="apply-coupon">Apply</button>
+            </div>
+            <p id="coupon-message" style="color: black;"></p>
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>£<span id="cart-subtotal">0.00</span></td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>£<span id="cart-total">0.00</span></strong></td>
+                </tr>
+            </table>
+            <button class="normal" id="checkout-btn">Proceed to checkout</button>
+        </div>
+    </section>
+
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span> </p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+<!--=============== FOOTER ===============-->
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/background + logo/rsz_1rsz_electroshop-high-resolution-logo_1.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>Brian Statham Way, Old Trafford, Stretford, Manchester M16 0PU</p>
+            <p><strong>Contact:</strong>Email: hello@ua92.ac.uk, Telephone: +44 (0)161 507 1992</p>
+            <p><strong>Hours:</strong> 09:00 - 18:30, Monday - Friday</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/app.jpg" alt="">
+                <img src="img/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways </p>
+            <img src="img/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>© 2025, ElectroStore - Premium Electronics E-Commerce</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+    <script>
+        // Function to render the cart items dynamically
+        function renderCartItems() {
+            const cartItemsContainer = document.getElementById("cart-items");
+            let cartSubtotal = 0;
+            cartItemsContainer.innerHTML = ""; // Clear the current cart items
+
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.forEach((item, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td><a href="#" class="remove-item" data-index="${index}"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="${item.image}" alt=""></td>
+                    <td>${item.name}</td>
+                    <td>£${item.price}</td>
+                    <td><input type="number" value="${item.quantity}" class="item-quantity" data-index="${index}"></td>
+                    <td>£<span class="subtotal">${item.price * item.quantity}</span></td>
+                `;
+                cartItemsContainer.appendChild(row);
+
+                // Update the cart subtotal
+                cartSubtotal += item.price * item.quantity;
+            });
+
+            // Update the cart total
+            document.getElementById("cart-subtotal").textContent = cartSubtotal.toFixed(2);
+            document.getElementById("cart-total").textContent = cartSubtotal.toFixed(2);
+        }
+
+        // Event listener for removing items
+        document.addEventListener("click", function (event) {
+            if (event.target.closest(".remove-item")) {
+                event.preventDefault(); // Prevent the default link behavior
+                const index = event.target.closest(".remove-item").getAttribute("data-index");
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart.splice(index, 1); // Remove the item from the cart
+                localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
+                renderCartItems(); // Re-render the cart
+            }
+        });
+
+        // Event listener for changing item quantity
+        document.addEventListener("input", function (event) {
+            if (event.target.classList.contains("item-quantity")) {
+                const index = event.target.getAttribute("data-index");
+                const newQuantity = parseInt(event.target.value);
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                // Update the item quantity
+                cart[index].quantity = newQuantity;
+
+                // Update the item's subtotal
+                const subtotalElement = event.target.closest("tr").querySelector(".subtotal");
+                subtotalElement.textContent = (cart[index].price * newQuantity).toFixed(2);
+
+                // Update the cart total
+                let cartSubtotal = 0;
+                cart.forEach(item => {
+                    cartSubtotal += item.price * item.quantity;
+                });
+                document.getElementById("cart-subtotal").textContent = cartSubtotal.toFixed(2);
+                document.getElementById("cart-total").textContent = cartSubtotal.toFixed(2);
+
+                // Save the updated cart to localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+            }
+        });
+
+        // Function to handle the checkout process
+        document.getElementById("checkout-btn").addEventListener("click", function () {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            if (cart.length === 0) {
+                alert("Your cart is empty.");
+                return;
+            }
+
+            let orderDetails = "Thank you for shopping at ELECTROSTORE 😊\n\nYour order:\n";
+            cart.forEach(item => {
+                orderDetails += `${item.name} - £${item.price} x ${item.quantity}\n`;
+            });
+
+            const totalAmount = parseFloat(document.getElementById("cart-total").textContent);
+            const trackingNumber = "XYZ12345"; // Generate a sample tracking number
+
+            orderDetails += `\nTotal: £${totalAmount.toFixed(2)}\n`;
+            orderDetails += `Your items will be received in 3-5 days. Your tracking number is: ${trackingNumber}`;
+
+            alert(orderDetails);
+        });
+
+        // Function to apply coupon code
+        document.getElementById("apply-coupon").addEventListener("click", function () {
+            const couponCode = document.getElementById("coupon-code").value.trim();
+            const couponMessage = document.getElementById("coupon-message");
+
+            if (couponCode === "ELECTRO2025") {
+                couponMessage.textContent = "Coupon applied! You saved 20% on your next order.";
+            } else if (couponCode === "") {
+                couponMessage.textContent = "Please enter a valid coupon code.";
+            } else {
+                couponMessage.textContent = "Invalid coupon code. Please try again.";
+            }
+        });
+
+        // Initialize the cart
+        renderCartItems();
+    </script>
+</body>
+
+</html>
