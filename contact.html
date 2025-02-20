@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroStore</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/rsz_1rsz_electroshop-high-resolution-logo_1.png" alt="Tech Store Logo">
+            </a>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a id="close" href="#"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>#let's_talk</h2>
+        <p>LEAVE A MESSAGE, We love to hear from you!</p>
+    </section>
+
+    <section id="contact-details" class="section-p1">
+        <div class="details">
+            <span>GET IN TOUCH</span> <!-- Displays the section title "Get in touch" -->
+            <h2>Visit one of our agency locations or contact us today</h2> <!-- Subtitle that provides context -->
+            <h3>Head Office</h3> <!-- Heading for the office location details -->
+            <div>
+                <li> <!-- Start of contact information list -->
+                    <i class="fal fa-map"></i> <!-- Icon for the address -->
+                    <p>Brian Statham Way, Old Trafford, Stretford, Manchester M16 0PU</p> <!-- Address of the head office -->
+                </li>
+                <li>
+                    <i class="far fa-envelope"></i> <!-- Icon for email -->
+                    <p>shahreyara07@gmail.com</p> <!-- Email address -->
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i> <!-- Icon for phone number -->
+                    <p>ua92@smokinggun.agency</p> <!-- Email displayed as the phone contact, might need correction to show a phone number -->
+                </li>
+                <li>
+                    <i class="far fa-clock"></i> <!-- Icon for working hours -->
+                    <p>Monday to Friday: 8.00am to 18:30pm </p> <!-- Office working hours -->
+                </li>
+            </div>
+        </div>
+    </section>
+    
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.192362091629!2d-2.2883445233726243!3d53.46192717204982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1fbd11eea0f%3A0xf59b2b4a0cde15c4!2sBrian%20Statham%20Way%2C%20Stretford%2C%20Manchester%20M16%200PU%2C%20UK!5e0!3m2!1sen!2suk!4v1707328890012!5m2!1sen!2suk"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section id="form-details">
+        <form id="contact-form" action="javascript:void(0);" method="post">
+            <span>LEAVE A MESSAGE</span> <!-- Title of the section -->
+            <h2>We love to hear from you</h2> <!-- Subtitle prompting users to leave a message -->
+            
+            <!-- Input fields for user information -->
+            <input type="text" name="name" placeholder="Your Name" required> <!-- Name input field -->
+            <input type="email" name="email" placeholder="E-mail" required> <!-- Email input field -->
+            <input type="text" name="subject" placeholder="Subject" required> <!-- Subject input field -->
+            
+            <!-- Textarea for user message -->
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea> 
+            
+            <!-- Submit button -->
+            <button class="normal" type="submit">Submit</button>
+        </form>
+    
+        <!-- Div for thank you message after submission -->
+        <div id="submitted-message" style="display: none;">
+            <h3>Thank you for contacting ELECTROSTORE!</h3>
+            <p>We are looking into your inquiry and will get back to you as soon as we can.</p>
+            <p>In the meantime, please check out our <a href="blog.html">Blog page</a> where you can find more information.</p>
+            
+            <p>Make sure you have entered the correct details:</p>
+            <p><strong>Name:</strong> <span id="display-name"></span></p>
+            <p><strong>Email:</strong> <span id="display-email"></span></p>
+            <p><strong>Subject:</strong> <span id="display-subject"></span></p>
+            <p><strong>Message:</strong> <span id="display-message"></span></p>
+        </div>
+        
+        <!-- Style for the submitted message -->
+        <style>
+            #submitted-message {
+                color: black; /* Sets the text color to black */
+            }
+        </style>
+    </section>
+    
+        
+
+        <div class="people">
+            <div>
+                <img src="img/1.png" alt=""> <!-- Image of Alexander Harper -->
+                <p>
+                    <span>Alexander Harper </span> Senior Marketing Manager <br>
+                    Phone: +44 12345 678910 <br> <!-- Contact number for Alexander -->
+                    Email: contact@example.com <!-- Email address for Alexander -->
+                </p>
+            </div>
+            <div>
+                <img src="img/2.png" alt=""> <!-- Image of Jordan Pate -->
+                <p>
+                    <span>Jordan Pate</span> Marketing Strategist <br>
+                    Phone: +44 12345 678910 <br> <!-- Contact number for Jordan -->
+                    Email: contact@example.com <!-- Email address for Jordan -->
+                </p>
+            </div>
+            <div>
+                <img src="img/3.png" alt=""> <!-- Image of Sofia Martinez -->
+                <p>
+                    <span>Sofia Martinez</span> Brand Manager <br>
+                    Phone: +44 12345 678910 <br> <!-- Contact number for Sofia -->
+                    Email: contact@example.com <!-- Email address for Sofia -->
+                </p>
+            </div>
+        </div>
+        </section>
+        
+
+    <section id="newsletter" class="section-m1 section-p1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters </h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" name="" placeholder="Your email address" id="">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/rsz_1rsz_electroshop-high-resolution-logo_1.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>Brian Statham Way, Old Trafford, Stretford, Manchester M16 0PU</p>
+            <p><strong>Contact:</strong>Email: hello@ua92.ac.uk, Telephone: +44 (0)161 507 1992</p>
+            <p><strong>Hours:</strong> 09:00 - 18:30, Monday - Friday</p>
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play </p>
+            <div class="row">
+                <img src="img/app.jpg" alt="">
+                <img src="img/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways </p>
+            <img src="img/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>©  2025, ElectroStore - Premium Electronics E-Commerce</p>
+        </div>
+    </footer>
+
+    <!-- Embedded JavaScript -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Get the form values
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const subject = document.querySelector('input[name="subject"]').value;
+            const message = document.querySelector('textarea[name="message"]').value;
+
+            // Display the submitted message
+            const submittedMessage = document.getElementById('submitted-message');
+            submittedMessage.style.display = 'block';
+
+            // Populate the submitted message with the form data
+            document.getElementById('display-name').textContent = name;
+            document.getElementById('display-email').textContent = email;
+            document.getElementById('display-subject').textContent = subject;
+            document.getElementById('display-message').textContent = message;
+
+            // Clear the form fields
+            document.getElementById('contact-form').reset();
+
+            // Scroll to the submitted message for better user experience
+            submittedMessage.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+
+</html>
