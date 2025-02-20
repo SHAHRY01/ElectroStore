@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Define the document type and language -->
+    <meta charset="UTF-8">
+    <!-- Set the character encoding to UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Ensure compatibility with the latest version of Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Make the page responsive on all devices -->
+    <title>ElectroStore - Shop</title>
+    <!-- Set the title of the page -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to the external stylesheet -->
+    <style>
+        /* Custom CSS for the shopping basket button */
+        .add-to-cart {
+            background-color: black;
+            /* Set the default background color to black */
+            color: white;
+            /* Set the text color to white */
+            border: none;
+            /* Remove the default button border */
+            padding: 10px 15px;
+            /* Add padding for better spacing */
+            cursor: pointer;
+            /* Change the cursor to a pointer on hover */
+            font-size: 16px;
+            /* Set the font size */
+            transition: background-color 0.3s ease;
+            /* Add a smooth transition effect */
+            display: flex;
+            /* Use flexbox for alignment */
+            align-items: center;
+            /* Center items vertically */
+            justify-content: center;
+            /* Center items horizontally */
+        }
+
+        .add-to-cart i {
+            margin-right: 5px;
+            /* Add spacing between the icon and text */
+        }
+
+        .add-to-cart:hover {
+            background-color: purple;
+            /* Change the background color to purple on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <section id="header">
+        <!-- Logo Section -->
+        <div class="logo">
+            <a href="index.html">
+                <!-- Link to the homepage -->
+                <img src="img/rsz_1rsz_electroshop-high-resolution-logo_1.png" alt="Tech Store Logo">
+                <!-- Display the logo image -->
+            </a>
+        </div>
+        <!-- Navigation Bar -->
+        <div>
+            <ul id="navbar">
+                <!-- List of navigation links -->
+                <li><a href="index.html">Home</a></li>
+                <!-- Link to the home page -->
+                <li><a href="shop.html">Shop</a></li>
+                <!-- Link to the shop page -->
+                <li><a href="blog.html">Blog</a></li>
+                <!-- Link to the blog page -->
+                <li><a href="about.html">About</a></li>
+                <!-- Link to the about page -->
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Link to the contact page -->
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <!-- Shopping bag icon link -->
+                <a id="close" href="#"><i class="far fa-times"></i></a>
+                <!-- Close icon for mobile navigation -->
+            </ul>
+        </div>
+        <!-- Mobile Navigation -->
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <!-- Mobile shopping bag link -->
+            <i id="bar" class="fas fa-outdent"></i>
+            <!-- Mobile menu toggle icon -->
+        </div>
+    </section>
+
+    <!-- Page Header Section -->
+    <section id="page-header">
+        <h2>#stayhome</h2>
+        <!-- Banner text -->
+        <p>Save more with coupons & up to 70% off!</p>
+        <!-- Subtext for the banner -->
+    </section>
+
+    <!-- Shop Section -->
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            <!-- Product 1: Asus ROG Strix 27inch -->
+            <div class="pro" data-id="1">
+                <img src="img/asus rog strix oled 27inch.jpg" alt="Asus ROG Strix 27inch">
+                <!-- Product image -->
+                <div class="des">
+                    <span>Asus</span>
+                    <!-- Product brand name -->
+                    <h5>ROG Strix 27inch</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£528</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="1" data-name="ROG Strix 27inch" data-price="528" data-image="img/asus rog strix oled 27inch.jpg">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2: Apple Watch Series 9 -->
+            <div class="pro" data-id="2">
+                <img src="img/apple watch series 9.jpg" alt="Apple Watch Series 9">
+                <!-- Product image -->
+                <div class="des">
+                    <span>Apple</span>
+                    <!-- Product brand name -->
+                    <h5>Watch Series 9</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£299</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="2" data-name="Watch Series 9" data-price="299" data-image="img/apple watch series 9.jpg">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3: Steam Deck -->
+            <div class="pro" data-id="3">
+                <img src="img/steam deck.jpg" alt="Steam Deck">
+                <!-- Product image -->
+                <div class="des">
+                    <span>Valve</span>
+                    <!-- Product brand name -->
+                    <h5>Steam Deck</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£670</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="3" data-name="Steam Deck" data-price="670" data-image="img/steam deck.jpg">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 4: Asus ROG Gaming Laptop -->
+            <div class="pro" data-id="4">
+                <img src="img/asus rog.jpg" alt="Asus ROG Gaming Laptop">
+                <!-- Product image -->
+                <div class="des">
+                    <span>Asus</span>
+                    <!-- Product brand name -->
+                    <h5>ROG Gaming Laptop</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£1599</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="4" data-name="ROG Gaming Laptop" data-price="1599" data-image="img/asus rog.jpg">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 5: DJI Osmo Pocket 3 -->
+            <div class="pro" data-id="5">
+                <img src="img/dji.jpg" alt="DJI Osmo Pocket 3">
+                <!-- Product image -->
+                <div class="des">
+                    <span>DJI</span>
+                    <!-- Product brand name -->
+                    <h5>Osmo Pocket 3</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£489</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="5" data-name="DJI Osmo Pocket 3" data-price="489" data-image="img/dji.jpg">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 6: Samsung Odyssey G5 -->
+            <div class="pro" data-id="6">
+                <img src="img/samsung monitor.jpg" alt="Samsung Odyssey G5">
+                <!-- Product image -->
+                <div class="des">
+                    <span>Samsung</span>
+                    <!-- Product brand name -->
+                    <h5>Odyssey G5</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£299</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="6" data-name="Odyssey G5" data-price="299" data-image="img/samsung monitor.jpg">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 7: Garmin Smart Watch -->
+            <div class="pro" data-id="7">
+                <img src="img/garmin.webp" alt="Garmin Smart Watch">
+                <!-- Product image -->
+                <div class="des">
+                    <span>Garmin</span>
+                    <!-- Product brand name -->
+                    <h5>Smart Watch</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£229</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="7" data-name="Garmin Smart Watch" data-price="229" data-image="img/garmin.webp">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 8: Sony Camera -->
+            <div class="pro" data-id="8">
+                <img src="img/sony camera.webp" alt="Sony Camera">
+                <!-- Product image -->
+                <div class="des">
+                    <span>Sony</span>
+                    <!-- Product brand name -->
+                    <h5>Camera</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£649</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="8" data-name="Sony Camera" data-price="649" data-image="img/sony camera.webp">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 9: Lenovo Ideapad 5 -->
+            <div class="pro" data-id="9">
+                <img src="img/ideapad 5.jpg" alt="Lenovo Ideapad 5">
+                <!-- Product image -->
+                <div class="des">
+                    <span>Lenovo</span>
+                    <!-- Product brand name -->
+                    <h5>Ideapad 5</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£450</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="9" data-name="Lenovo Ideapad 5" data-price="450" data-image="img/ideapad 5.jpg">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 10: Beats Pro -->
+            <div class="pro" data-id="10">
+                <img src="img/beats.jpg" alt="Beats Pro">
+                <!-- Product image -->
+                <div class="des">
+                    <span>Beats</span>
+                    <!-- Product brand name -->
+                    <h5>Pro</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£179</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="10" data-name="Beats Pro" data-price="179" data-image="img/beats.jpg">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 11: PS5 Pro Edition -->
+            <div class="pro" data-id="11">
+                <img src="img/ps5 pro.avif" alt="PS5 Pro Edition">
+                <!-- Product image -->
+                <div class="des">
+                    <span>PS5</span>
+                    <!-- Product brand name -->
+                    <h5>Pro Edition</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£499</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="11" data-name="PS5 Pro Edition" data-price="499" data-image="img/ps5 pro.avif">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 12: Samsung S21 Ultra -->
+            <div class="pro" data-id="12">
+                <img src="img/rsz_s21_ultra.jpg" alt="Samsung S21 Ultra">
+                <!-- Product image -->
+                <div class="des">
+                    <span>Samsung</span>
+                    <!-- Product brand name -->
+                    <h5>S21 Ultra</h5>
+                    <!-- Product name -->
+                    <div class="star">
+                        <!-- Star rating section -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                        <i class="fas fa-star"></i>
+                        <!-- Star icon -->
+                    </div>
+                    <h4>£650</h4>
+                    <!-- Product price -->
+                    <button class="add-to-cart" data-id="12" data-name="Samsung S21 Ultra" data-price="650" data-image="img/rsz_s21_ultra.jpg">
+                        <!-- Add to Cart button -->
+                        <i class="fas fa-shopping-basket"></i> Add to Cart
+                        <!-- Shopping basket icon and text -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <!-- Newsletter heading -->
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+            <!-- Newsletter description -->
+        </div>
+        <div class="form">
+            <!-- Input form for email subscription -->
+            <input type="email" id="emailInput" placeholder="Your email address">
+            <!-- Email input field -->
+            <button class="normal" onclick="subscribeNewsletter()">Sign Up</button>
+            <!-- Button to trigger subscription -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/rsz_1rsz_electroshop-high-resolution-logo_1.png" alt="">
+            <!-- Display the logo image -->
+            <h4>Contact</h4>
+            <!-- Contact section heading -->
+            <p><strong>Address: </strong>Brian Statham Way, Old Trafford, Stretford, Manchester M16 0PU</p>
+            <!-- Display the address -->
+            <p><strong>Contact:</strong> Email: hello@ua92.ac.uk, Telephone: +44 (0)161 507 1992</p>
+            <!-- Display contact details -->
+            <p><strong>Hours:</strong> 09:00 - 18:30, Monday - Friday</p>
+            <!-- Display working hours -->
+            <div class="icon">
+                <!-- Social media icons -->
+                <i class="fab fa-facebook-f"></i>
+                <!-- Facebook icon -->
+                <i class="fab fa-twitter"></i>
+                <!-- Twitter icon -->
+                <i class="fab fa-instagram"></i>
+                <!-- Instagram icon -->
+                <i class="fab fa-pinterest-p"></i>
+                <!-- Pinterest icon -->
+                <i class="fab fa-youtube"></i>
+                <!-- YouTube icon -->
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <!-- About section heading -->
+            <a href="#">About Us</a>
+            <!-- Link to About Us page -->
+            <a href="#">Delivery Information</a>
+            <!-- Link to Delivery Information page -->
+            <a href="#">Privacy Policy</a>
+            <!-- Link to Privacy Policy page -->
+            <a href="#">Terms & Conditions</a>
+            <!-- Link to Terms & Conditions page -->
+            <a href="#">Contact Us</a>
+            <!-- Link to Contact Us page -->
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <!-- My Account section heading -->
+            <a href="#">Sign In</a>
+            <!-- Link to Sign In page -->
+            <a href="#">View Cart</a>
+            <!-- Link to View Cart page -->
+            <a href="#">My Wishlist</a>
+            <!-- Link to My Wishlist page -->
+            <a href="#">Track My Order</a>
+            <!-- Link to Track My Order page -->
+            <a href="#">Help</a>
+            <!-- Link to Help page -->
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <!-- Install App section heading -->
+            <p>From App Store or Google Play</p>
+            <!-- Description for app installation -->
+            <div class="row">
+                <img src="img/app.jpg" alt="">
+                <!-- App Store download button -->
+                <img src="img/play.jpg" alt="">
+                <!-- Google Play download button -->
+            </div>
+            <p>Secured Payment Gateways </p>
+            <!-- Description for payment gateways -->
+            <img src="img/pay.png" alt="">
+            <!-- Payment gateway icons -->
+        </div>
+
+        <div class="copyright">
+            <p>© 2025, ElectroStore - Premium Electronics E-Commerce</p>
+            <!-- Copyright notice -->
+        </div>
+    </footer>
+
+    <script>
+        // Add to Cart Functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            // Add event listener to all "Add to Cart" buttons
+            button.addEventListener('click', function() {
+                // Create a product object with details
+                const product = {
+                    id: this.getAttribute('data-id'),
+                    // Get product ID from data attribute
+                    name: this.getAttribute('data-name'),
+                    // Get product name from data attribute
+                    price: parseFloat(this.getAttribute('data-price')),
+                    // Get product price from data attribute
+                    image: this.getAttribute('data-image'),
+                    // Get product image from data attribute
+                    quantity: 1
+                    // Set default quantity to 1
+                };
+
+                // Retrieve the cart from localStorage or initialize an empty array
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                // Check if the product already exists in the cart
+                const existingProductIndex = cart.findIndex(item => item.id === product.id);
+
+                if (existingProductIndex >= 0) {
+                    // If the product exists, increase its quantity
+                    cart[existingProductIndex].quantity += 1;
+                } else {
+                    // If the product doesn't exist, add it to the cart
+                    cart.push(product);
+                }
+
+                // Save the updated cart to localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+                // Show a confirmation message
+                alert(`${product.name} has been added to your cart!`);
+            });
+        });
+
+        // Newsletter Subscription
+        function subscribeNewsletter() {
+            // Get the email input value
+            const emailInput = document.getElementById("emailInput").value;
+            if (emailInput.trim() !== "") {
+                // If the email is valid, show a success message
+                alert("Thank you for subscribing to our newsletter! 😊");
+            } else {
+                // If the email is invalid, show an error message
+                alert("Please enter a valid email address.");
+            }
+        }
+    </script>
+</body>
+
+</html>

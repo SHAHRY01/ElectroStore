@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set, compatibility, and viewport settings -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>ElectroShop</title>
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <!-- Link to Swiper CSS for carousel functionality -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header section containing logo and navigation -->
+    <section id="header">
+        <div class="logo">
+            <!-- Logo linking to the home page -->
+            <a href="home.html">
+                <img src="img/rsz_1rsz_electroshop-high-resolution-logo_1.png" alt="Tech Store Logo">
+            </a>
+        </div>
+        <!-- Navigation bar with links to different pages -->
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Shopping cart icon -->
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <!-- Close icon for mobile navigation -->
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <!-- Mobile navigation icons -->
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <!-- Hero section with promotional content -->
+    <section id="hero">
+        <h4>Exclusive Electronic Deals</h4>
+        <h2>Top Tech Products</h2>
+        <h1>Available Now</h1>
+        <p>Shop cutting-edge gadgets & get up to 50% off!</p>
+        <!-- Button linking to the shop page -->
+        <button onclick="window.location.href='shop.html'">Shop Now</button>
+    </section>
+
+    <!-- Features section with icons and descriptions -->
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="img/f1.png" alt="">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/f2.png" alt="">
+            <h6>Online Support</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/f3.png" alt="">
+            <h6>Easy Returns</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/f4.png" alt="">
+            <h6>Secure Payments</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/f5.png" alt="">
+            <h6>Warranty Services</h6>
+        </div>
+    </section>
+
+    <!-- Swiper CSS for carousel functionality -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Swiper JS for carousel functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Categories section with a carousel of popular categories -->
+    <section class="categories container section">
+        <h3 class="section__title" style="color: black;"><span>Popular</span> Categories</h3>
+        <div class="categories__container swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1: Laptops category -->
+                <a href="shop.html" class="category__item swiper-slide">
+                    <div class="category__card">
+                        <img src="img/dell.jpg" alt="Laptops" class="category__img" />
+                        <h3 class="category__title">Laptops</h3>
+                    </div>
+                </a>
+                <!-- Slide 2: Headphones category -->
+                <a href="shop.html" class="category__item swiper-slide">
+                    <div class="category__card">
+                        <img src="img/apple-airpods-max-green-03-800x800.webp" alt="Headphones" class="category__img" />
+                        <h3 class="category__title">Headphones</h3>
+                    </div>
+                </a>
+                <!-- Slide 3: Smart Watches category -->
+                <a href="shop.html" class="category__item swiper-slide">
+                    <div class="category__card">
+                        <img src="img/smartwatch.webp" alt="Smart Watches" class="category__img" />
+                        <h3 class="category__title">Smart Watches</h3>
+                    </div>
+                </a>
+                <!-- Slide 4: Cameras category -->
+                <a href="shop.html" class="category__item swiper-slide">
+                    <div class="category__card">
+                        <img src="img/hassle.webp" alt="Cameras" class="category__img" />
+                        <h3 class="category__title">Cameras</h3>
+                    </div>
+                </a>
+                <!-- Slide 5: Phones category -->
+                <a href="shop.html" class="category__item swiper-slide">
+                    <div class="category__card">
+                        <img src="img/google-pixel-9-pro-xl.jpg" alt="Phones" class="category__img" />
+                        <h3 class="category__title">Phones</h3>
+                    </div>
+                </a>
+            </div>
+            <!-- Navigation buttons for the carousel -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- JavaScript to initialize the Swiper carousel -->
+    <script>
+        var swiperCategories = new Swiper('.categories__container', {
+            slidesPerView: 5, // Number of visible slides
+            spaceBetween: 24, // Space between slides
+            loop: true, // Enable infinite loop
+            navigation: {
+                nextEl: '.swiper-button-next', // Next button
+                prevEl: '.swiper-button-prev', // Previous button
+            },
+            autoplay: {
+                delay: 3000, // Delay between slides in milliseconds
+                disableOnInteraction: false, // Continue autoplay after user interactions
+            },
+            breakpoints: {
+                350: {
+                    slidesPerView: 2, // Adjust slides per view for smaller screens
+                    spaceBetween: 16,
+                },
+                768: {
+                    slidesPerView: 3, // Adjust slides per view for medium screens
+                    spaceBetween: 24,
+                },
+                992: {
+                    slidesPerView: 4, // Adjust slides per view for larger screens
+                    spaceBetween: 24,
+                },
+                1400: {
+                    slidesPerView: 5, // Adjust slides per view for extra-large screens
+                    spaceBetween: 24,
+                },
+            },
+            on: {
+                init: function () {
+                    this.autoplay.start(); // Start autoplay on initialization
+                },
+            },
+        });
+    </script>
+
+    <!-- Featured Electronics section -->
+<section class="products section container">
+    <div class="tab__btns">
+        <span class="tab__btn active-tab" data-target="#featured">Featured</span>
+    </div>
+    <!-- Tab buttons for navigation, with "Featured" as the active tab -->
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer Collection New Modern Design</p>
+        <div class="pro-container">
+            <!-- Container for featured products with a heading and description -->
+
+            <!-- Product 1: DJI Osmo Pocket 3 -->
+            <div class="pro" data-id="1">
+                <img src="img/dji.jpg" alt="">
+                <div class="des">
+                    <span>DJI</span>
+                    <!-- Product brand name -->
+
+                    <h5>Osmo Pocket 3</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <!-- Star rating for the product -->
+
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>£489</h4>
+                </div>
+                <!-- Product details including name, rating, and price -->
+
+                <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- Add to cart button for the product -->
+
+                <!-- Product 2: Samsung Odyssey G5 -->
+                <div class="pro" data-id="2">
+                    <img src="img/samsung monitor.jpg" alt="">
+                    <div class="des">
+                        <span>Samsung</span>
+                        <h5>Oydessy G5</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>£299</h4>
+                    </div>
+                    <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <!-- Product 3: Garmin Smart Watch -->
+                <div class="pro" data-id="3">
+                    <img src="img/garmin.webp" alt="">
+                    <div class="des">
+                        <span>Garmin</span>
+                        <h5>Smart Watch</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>£229</h4>
+                    </div>
+                    <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <!-- Product 4: Sony Camera -->
+                <div class="pro" data-id="4">
+                    <img src="img/sony camera.webp" alt="">
+                    <div class="des">
+                        <span>Sony Camera</span>
+                        <h5>Cartoon Astronaut T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>£649</h4>
+                    </div>
+                    <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <!-- Product 5: Lenovo Ideapad 5 -->
+                <div class="pro" data-id="5">
+                    <img src="img/ideapad 5.jpg" alt="">
+                    <div class="des">
+                        <span>Lenovo</span>
+                        <h5>Ideapad 5</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>£450</h4>
+                    </div>
+                    <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <!-- Product 6: Beats Pro -->
+                <div class="pro" data-id="6">
+                    <img src="img/beats.jpg" alt="">
+                    <div class="des">
+                        <span>Beats</span>
+                        <h5>Pro</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>£179</h4>
+                    </div>
+                    <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <!-- Product 7: PS5 Pro Edition -->
+                <div class="pro" data-id="7">
+                    <img src="img/ps5 pro.avif" alt="">
+                    <div class="des">
+                        <span>PS5</span>
+                        <h5>Pro Edition</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>£499</h4>
+                    </div>
+                    <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <!-- Product 8: Samsung S21 Ultra -->
+                <div class="pro" data-id="8">
+                    <img src="img/rsz_s21_ultra.jpg" alt="">
+                    <div class="des">
+                        <span>Samsung</span>
+                        <h5>S21 Ultra</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>£650</h4>
+                    </div>
+                    <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Banner section with promotional content -->
+    <section id="banner" class="section-m1">
+        <h4>Tech Deals</h4>
+        <h2>Get Up to <span>50% Off</span> on Accessories & Services</h2>
+        <button class="normal">Explore More</button>
+    </section>
+
+    <!-- Latest Tech Innovations section -->
+    <section id="product1" class="section-p1">
+        <h2>Latest Tech Innovations</h2>
+        <p>Explore the newest gadgets and cutting-edge technology</p>
+        <div class="pro-container">
+            <!-- Product 9: Anker Prime Powerbank -->
+            <div class="pro" data-id="9">
+                <img src="img/anker powerbank.webp" alt="">
+                <div class="des">
+                    <span>Anker</span>
+                    <h5>Prime Powerbank</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>£179</h4>
+                </div>
+                <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- Product 10: Meta Quest 3 Pro -->
+            <div class="pro" data-id="10">
+                <img src="img/meta quest 3.jpg" alt="">
+                <div class="des">
+                    <span>Meta Quest</span>
+                    <h5>3 Pro</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>£469</h4>
+                </div>
+                <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- Product 11: Sony A7R V Digital Camera Body -->
+            <div class="pro" data-id="11">
+                <img src="img/sony cammera a7r.jpg" alt="">
+                <div class="des">
+                    <span>Sony</span>
+                    <h5>A7R V Digital Camera Body</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>£3249</h4>
+                </div>
+                <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- Product 12: Logitech G502 LIGHTSPEED Wireless Gaming Mouse -->
+            <div class="pro" data-id="12">
+                <img src="img/logitech.jpg" alt="">
+                <div class="des">
+                    <span>Logitech</span>
+                    <h5>G502 LIGHTSPEED Wireless Gaming Mouse</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>£35</h4>
+                </div>
+                <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- Product 13: One Plus Tablet -->
+            <div class="pro" data-id="13">
+                <img src="img/one plus.jpg" alt="">
+                <div class="des">
+                    <span>One Plus</span>
+                    <h5>Tablet</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>£379</h4>
+                </div>
+                <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- Product 14: TP-Link Wi-Fi 7 Router -->
+            <div class="pro" data-id="14">
+                <img src="img/tp.jpg" alt="">
+                <div class="des">
+                    <span>TP-Link</span>
+                    <h5>Wi-Fi 7 Router</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>£230</h4>
+                </div>
+                <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- Product 15: Roomba Robot Vacuum J9 -->
+            <div class="pro" data-id="15">
+                <img src="img/roomba.jpg" alt="">
+                <div class="des">
+                    <span>Roomba</span>
+                    <h5>Robot Vacuum J9</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>£699</h4>
+                </div>
+                <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- Product 16: Apple Airpods 4th Gen -->
+            <div class="pro" data-id="16">
+                <img src="img/2 airpod.jpg" alt="">
+                <div class="des">
+                    <span>Apple</span>
+                    <h5>Airpods 4th Gen</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>£379</h4>
+                </div>
+                <a href="#" class="add-to-cart"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unbeatable Electronic Deals section -->
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Unbeatable Electronic Deals</h4>
+            <h2>buy 1 get 1 free on accessories</h2>
+            <span>The best tech deals are at ElectroStore</span>
+            <button class="white">Learn More</button>
+        </div>
+        <div class="banner-box banner-box2">
+            <h4>Gear Up For 2025</h4>
+            <h2>Upcomming season</h2>
+            <span>The Future of electronics start here</span>
+            <button class="white">Collection</button>
+        </div>
+    </section>
+
+ <!-- Newsletter Section -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="email" id="emailInput" placeholder="Your email address">
+            <button class="normal" onclick="subscribeNewsletter()">Sign Up</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/rsz_1rsz_electroshop-high-resolution-logo_1.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>Brian Statham Way, Old Trafford, Stretford, Manchester M16 0PU</p>
+            <p><strong>Contact:</strong> Email: hello@ua92.ac.uk, Telephone: +44 (0)161 507 1992</p>
+            <p><strong>Hours:</strong> 09:00 - 18:30, Monday - Friday</p>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/app.jpg" alt="">
+                <img src="img/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways </p>
+            <img src="img/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>© 2025, ElectroStore - Premium Electronics E-Commerce</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add to Cart Functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const product = {
+                    id: this.getAttribute('data-id'),
+                    name: this.getAttribute('data-name'),
+                    price: parseFloat(this.getAttribute('data-price')),
+                    image: this.getAttribute('data-image'),
+                    quantity: 1
+                };
+
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const existingProductIndex = cart.findIndex(item => item.id === product.id);
+
+                if (existingProductIndex >= 0) {
+                    cart[existingProductIndex].quantity += 1;
+                } else {
+                    cart.push(product);
+                }
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+                alert(`${product.name} has been added to your cart!`);
+            });
+        });
+
+        // Newsletter Subscription
+        function subscribeNewsletter() {
+            const emailInput = document.getElementById("emailInput").value;
+            if (emailInput.trim() !== "") {
+                alert("Thank you for subscribing to our newsletter! 😊");
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        }
+    </script>
+</body>
+
+</html>
+<!-- Links to the JavaScript file for functionality -->
+</body>
+</html>
+
+    <script src="script.js"></script>
+    <!-- Links to the JavaScript file for functionality -->
+    </body>
+    </html>
+    
+
+    <!-- JavaScript for handling "Add to Cart" functionality -->
+    <script>
+        document.querySelectorAll(".add-to-cart").forEach(button => {
+            button.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent default link behavior
+                const product = this.closest(".pro");
+                const productId = product.getAttribute("data-id");
+                const productName = product.querySelector("h5").textContent;
+                const productPrice = parseFloat(product.querySelector("h4").textContent.replace("£", ""));
+                const productImage = product.querySelector("img").src;
+
+                // Create a product object
+                const productItem = {
+                    id: productId,
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    quantity: 1,
+                };
+
+                // Add the product to the cart
+                addToCart(productItem);
+                alert(`${productName} has been added to your cart!`);
+            });
+        });
+
+        // Function to add a product to the cart
+        function addToCart(product) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const existingProduct = cart.find(item => item.id === product.id);
+
+            if (existingProduct) {
+                existingProduct.quantity += 1; // Increase quantity if product exists
+            } else {
+                cart.push(product); // Add new product to the cart
+            }
+
+            // Save the updated cart to localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+    </script>
+</body>
+
+</html>
